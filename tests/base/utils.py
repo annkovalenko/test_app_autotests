@@ -50,7 +50,6 @@ def check_success_install(tmpl_filename):
         assert tag is not None
         assert tag.string == str(element["label"])
         if "link" not in element:
-            pass # Проверить, что class = disabled и нет атрибута hreff + соответствие id и label
             assert "disabled" in tag.attrs["class"]
             assert tag.name != "a"
         else:
